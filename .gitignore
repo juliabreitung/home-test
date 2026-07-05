@@ -1,0 +1,18 @@
+node_modules/
+dist/
+
+# Entorno local — puede contener URLs internas u overrides sensibles
+.env
+.env.local
+.env.*.local
+
+# Artefactos de Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Logs y OS
+*.log
+.DS_Store
+Thumbs.db

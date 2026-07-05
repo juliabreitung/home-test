@@ -1,0 +1,23 @@
+{
+  "name": "home-test",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "enableNonRootDocker": "true",
+      "moby": "true"
+    }
+  },
+  "forwardPorts": [3100],
+  "portsAttributes": {
+    "3100": {
+      "label": "demo-app",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-playwright.playwright"]
+    }
+  }
+}
